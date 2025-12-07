@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unidos F.C. — Demo</title>
+  <style>
+    /* Reset mínimo */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#0048a0;color:#fff}
+
+    /* Header estilo "Palmeiras" */
+    .topbar{background:linear-gradient(90deg,#0048a0 0%,#075db3 100%);color:#fff}
+    .site-header{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+
+    /* Logo circular pequeno à esquerda */
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo-small{width:64px;height:64px;border-radius:50%;overflow:hidden;display:inline-block;background:#fff;display:flex;align-items:center;justify-content:center;padding:6px}
+    .brand .logo-small img{width:100%;height:auto;display:block}
+    .brand h1{font-size:20px;letter-spacing:1px}
+
+    /* Navegação central */
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600}
+    nav a:hover{opacity:0.9}
+
+    /* Área direita (busca + CTA) */
+    .right-actions{display:flex;align-items:center;gap:16px}
+    .search{width:36px;height:36px;border-radius:6px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center}
+    .search svg{fill:#fff;width:18px;height:18px}
+
+    .cta{background:#fff;color:#0b5a2e;padding:6px 12px;border-radius:6px;font-weight:700;display:flex;align-items:center;gap:10px}
+    .cta small{display:block;font-size:11px;color:#6b6b6b;font-weight:600}
+
+    /* Hero com logotipo central (versão grande) */
+    .hero{background:linear-gradient(#0048a0,#075db3);min-height:520px;display:flex;align-items:center;justify-content:center}
+    .logo-big{background:transparent;color:#fff;text-align:center}
+    .logo-big img{max-width:360px;width:45vmin;height:auto}
+    .logo-caption{margin-top:18px;color:#dbefff;font-weight:600}
+
+    /* Responsividade simples */
+    @media (max-width:900px){
+      nav{display:none}
+      .brand h1{display:none}
+      .logo-big img{max-width:260px}
+    }
+    /* Animações personalizadas */
+  @keyframes fadeInUp {
+    0% {opacity:0; transform:translateY(20px);} 
+    100% {opacity:1; transform:translateY(0);} 
+  }
+  @keyframes floatLogo {
+    0% {transform:translateY(0);} 
+    50% {transform:translateY(-14px);} 
+    100% {transform:translateY(0);} 
+  }
+  @keyframes glowPulse {
+    0% {box-shadow:0 0 0px rgba(255,255,255,0.4);} 
+    50% {box-shadow:0 0 16px rgba(255,255,255,0.8);} 
+    100% {box-shadow:0 0 0px rgba(255,255,255,0.4);} 
+  }
+
+  .hero {animation:fadeInUp 1.2s ease-out forwards;}
+  .logo-big img {animation:floatLogo 4s ease-in-out infinite;}
+  .cta {animation:fadeInUp 1s ease-out forwards;}
+  .logo-small {animation:glowPulse 3s ease-in-out infinite;}
+</style>
+</head>
+<body>
+  <!-- Header inspirado no exemplo que forneceste -->
+  <header class="topbar">
+    <div class="site-header">
+      <div class="brand">
+        <!-- Usa o ficheiro de imagem que tens no ambiente: caminho local fornecido -->
+        <a href="#" class="logo-small" title="Unidos F.C."><img src="unidos.png" alt="Unidos F.C."></a>
+        <h1>UNIDOS F.C.</h1>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="https://youtube.com" title="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" style="width:22px;filter:invert(1)"></a>
+        <a href="https://tiktok.com" title="TikTok"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok" style="width:22px;filter:invert(1)"></a>
+        <a href="https://classroom.google.com" title="Google Classroom"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googleclassroom.svg" alt="Classroom" style="width:22px;filter:invert(1)"></a>
+        <a href="https://wa.me" title="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width:22px;filter:invert(1)"></a>
+        <a href="https://instagram.com" title="Instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" style="width:22px;filter:invert(1)"></a>
+        <a href="https://spotify.com" title="Spotify"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spotify.svg" alt="Spotify" style="width:22px;filter:invert(1)"></a>
+      </nav>
+
+      <div class="right-actions">
+        
+
+        <a class="cta" href="#" style="display:flex;align-items:center;gap:10px">
+          <div style="display:flex;flex-direction:column;line-height:1">
+            <small style="font-size:11px;color:#6b6b6b;font-weight:600">SEJA</small>
+            <strong>AVANTE UNIDOS!</strong>
+          </div>
+          <div style="background:#0b5a2e;color:#fff;padding:4px 6px;border-radius:8px;font-weight:800;display:flex;align-items:center;justify-content:center">
+            <img src="unidos.png" alt="Unidos F.C." style="width:42px;height:auto;border-radius:4px;">
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero: mostra a logo grande (versão centralizada como no teu pedido) -->
+  <main class="hero" style="transition:0.4s">
+    <div class="logo-big">
+      <img src="unidos.png" alt="Logo Unidos F.C.">
+      <div class="logo-caption">UNIDOS F.C. • Fundado 1991<br>Boas vindas, Davi — qual a boa de hoje?<br><span id="br-time"></span></div>
+    </div>
+  </main>
+
+  <!-- Pequeno rodapé técnico -->
+  
+
+<script>
+function updateTime(){
+  const opts={timeZone:"America/Sao_Paulo",hour12:false,weekday:"long",year:"numeric",month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"};
+  document.getElementById("br-time").textContent = new Date().toLocaleString("pt-BR", opts);
+}
+updateTime(); setInterval(updateTime, 60000);
+</script>
+</body>
+</html>
